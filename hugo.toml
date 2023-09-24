@@ -1,3 +1,2 @@
-baseURL = 'https://deltronik.github.io/'
 languageCode = 'en-Es'
-title = 'Mi primer proyecto desplegado en netlify'
+title = 'Mi primer proyecto desplegado con github page and netlify'
