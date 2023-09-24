@@ -1,2 +1,6 @@
 languageCode = 'en-Es'
-title = 'Mi primer proyecto desplegado con github page and netlify'
+title = 'LinkBox'
+
+[params]
+
+
