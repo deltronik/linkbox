@@ -1,0 +1,30 @@
+{{/* Font Awesome */}}
+<link rel="stylesheet" href="resources/fontawesome/css/all.css">
+{{/* Style*/}}
+
+{{- with resources.Get "css/main.css" }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrit>
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{/*Custom*/}}
+{{ if $.Site.Params.custom_css }}
+  {{ if  $.Site.Params.custom_css.theme_toggle }}
+    {{ $style_Mode := resources.Get "css/toggle_theme.scss" | resources.ExecuteAsT>
+    <link rel="stylesheet" href="{{ $style_Mode.Permalink }}">
+    {{ else }}
+    {{ $style_Mode := resources.Get "css/simple_style.scss" | resources.ExecuteAsT>
+    <link rel="stylesheet" href="{{ $style_Mode.Permalink }}">
+    {{ end }}
+{{ else }}
+  {{ $style_Mode := resources.Get "css/style.css"}}
+  <link rel="stylesheet" href="{{ $style_Mode.Permalink }}">
+{{ end }}
+
+
+
