@@ -1,0 +1,94 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+.container{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #132d468c;
+    width: 80%;
+    margin-top: 10vh;
+}
+
+.box-avatar{
+    border-radius: 15px;
+    height: 150px;
+    width: 150px;
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+.avatar{
+    border-radius: 15px;
+    height: 150px;
+    width: 150px;
+}
+
+.main-name{
+    font-family: system-ui;
+    font-size: 2em;
+    font-weight: 600;
+    font-style: italic;
+    font-variant: small-caps;
+    font-stretch: expanded;
+}
+
+.main-description{
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.box-ico{
+    margin-top: 15px;
+}
+
+.icon-item{
+    background-color: inherit;
+    margin-right:4px;
+    margin-left:4px;
+}
+
+.icon-link{
+    color:black;
+    font-size: 1em;
+}
+
+.box-content{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 90%;
+}
+
+.url-item{
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.item-group{
+    border-radius: 5px;
+    background-color: black;
+    color:white;
+    width: 90%;
+}
+
+footer{
+    font-size: 14px;
+    background-color: inherit;
+    color: white;
+    width: 100%;
+    height: auto;
+}
+
+footer a{
+    color: white;
+}
+
+footer img{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.love{
+    color: red;
+}

@@ -1,0 +1,23 @@
+<header class="profile">
+<figure class="box-avatar">
+    <a href="{{ .Site.BaseURL }}" class="url-group">
+	{{ partial "header/theme_toggle.html" . }}
+    </a>
+</figure>
+
+<main class="box-main">
+    {{ if $.Site.Params.header.title_site }}
+        <h1 class="main-name">{{ $.Site.Params.header.title_site }}</h1>         
+    {{ else }}
+    <h1 class="main-name"> {{ $.Site.Title }} </h1>
+    {{ end }}
+
+    {{ with $.Site.Params.header.paragraph }}
+        <p class="main-description"> {{ $.Site.Params.header.paragraph }} </p>
+    {{ end }}
+    
+    {{ with $.Site.Params.header.social_bar }}
+        {{ partial "header/social_bar.html" . }}
+    {{ end }}
+</main>
+</header>

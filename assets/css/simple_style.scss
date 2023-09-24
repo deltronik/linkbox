@@ -1,0 +1,217 @@
+{{/* User default theme */}}
+        body{
+        {{ with $.Site.Params.custom_css.background_color_body }}
+            background-color: {{ $.Site.Params.custom_css.background_color_body }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.background_image_body }}
+            background-image:url({{ $.Site.Params.custom_css.background_image_body }});
+
+            {{ with $.Site.Params.custom_css.attachment_image }}
+                background-attachment : {{ $.Site.Params.custom_css.attachment_image }};
+            {{ end }}
+            {{ with $.Site.Params.custom_css.size_image }}
+            background-size: {{ $.Site.Params.custom_css.size_image }};
+            {{ end }}
+            {{ with $.Site.Params.custom_css.position_image }}
+            background-position:{{ $.Site.Params.custom_css.position_image }};
+            {{ end }}
+            {{ with $.Site.Params.custom_css.repeat_image }}
+            background-repeat:{{ $.Site.Params.custom_css.repeat_image }};
+            {{ end }}
+
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.color_text }}
+            color:{{ $.Site.Params.custom_css.color_text }};
+        {{ end }}
+        }
+
+        .container{
+        {{ with $.Site.Params.custom_css.border_radius_container }}
+            border-top-left-radius: {{ $.Site.Params.custom_css.border_radius_container }};
+            border-top-right-radius: {{ $.Site.Params.custom_css.border_radius_container }};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.background_color_container }}
+            background-color: {{ $.Site.Params.custom_css.background_color_container }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.width_container }}
+            width: {{$.Site.Params.custom_css.width_container }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.top_container }}
+            margin-top: {{ $.Site.Params.custom_css.top_container }};
+        {{ end }}
+        }
+
+        .box-avatar{
+        {{ with $.Site.Params.custom_css.radius_avatar }}
+            border-radius: {{ $.Site.Params.custom_css.radius_avatar }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.size_avatar }}
+            height: {{ $.Site.Params.custom_css.size_avatar }} ;
+            width:{{ $.Site.Params.custom_css.size_avatar }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.top_avatar }}
+            margin-top: {{ $.Site.Params.custom_css.top_avatar }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.divisor_avatar_title }}
+            margin-bottom: {{ $.Site.Params.custom_css.divisor_avatar_title  }};
+        {{ end }}
+        }
+
+        .avatar{
+        {{ with $.Site.Params.custom_css.radius_avatar }}
+            border-radius: {{ $.Site.Params.custom_css.radius_avatar }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.size_avatar }}
+            height: {{ $.Site.Params.custom_css.size_avatar }} ;
+            width:{{ $.Site.Params.custom_css.size_avatar }};
+        {{ end }}
+        }
+
+        .main-name{
+        {{ with $.Site.Params.custom_css.font_title }}
+            font-family: {{ $.Site.Params.custom_css.font_title }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.size_title }}
+            font-size: {{ $.Site.Params.custom_css.size_title }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.weight_title }}
+            font-weight: {{ $.Site.Params.custom_css.weight_title }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.style_title }}
+            font-style: {{ $.Site.Params.custom_css.style_title }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.variant_title }}
+            font-variant: {{ $.Site.Params.custom_css.variant_title }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.stretch_title }}
+            font-stretch: {{ $.Site.Params.custom_css.stretch_title }};
+        {{ end }}
+        }
+
+        .main-description{
+        {{ with $.Site.Params.custom_css.description_size }}
+            font-size: {{ $.Site.Params.custom_css.description_size }};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.divisor_title_description }}
+            margin-top:{{ $.Site.Params.custom_css.divisor_title_description }};
+        {{ end }}
+        }
+
+        .box-ico{
+        {{ with $.Site.Params.custom_css.divisor_description_icon }}
+            margin-top: {{ $.Site.Params.custom_css.divisor_description_icon }};
+        {{ end }}
+        }
+
+        .icon-item{
+        {{ with $.Site.Params.custom_css.color_back_icon }}
+            background-color: {{ $.Site.Params.custom_css.color_back_icon }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.separate_icon }}
+            margin-right:{{ $.Site.Params.custom_css.separate_icon }};
+            margin-left:{{ $.Site.Params.custom_css.separate_icon }};
+        {{ end }}
+        }
+
+        .icon-link{
+        {{ with $.Site.Params.custom_css.color_icon }}
+            color:{{ $.Site.Params.custom_css.color_icon }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.size_icon}}
+            font-size: {{ $.Site.Params.custom_css.size_icon }};
+        {{ end }}
+        }
+
+        .box-content{
+        {{ with $.Site.Params.custom_css.divisor_menu_header }}
+            margin-top: {{ $.Site.Params.custom_css.divisor_menu_header }};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.divisor_menu_footer }}
+            margin-bottom: {{ $.Site.Params.custom_css.divisor_menu_footer }};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.width_menu}}
+            width:{{ $.Site.Params.custom_css.width_menu }};
+        {{ end }}
+        }
+
+
+        .url-item{
+        {{ with $.Site.Params.custom_css.divisor_item_menu }}
+            margin-top: {{ $.Site.Params.custom_css.divisor_item_menu }};
+            margin-bottom: {{ $.Site.Params.custom_css.divisor_item_menu }};
+        {{ end }}
+        }
+
+        .item-group{
+        {{ with $.Site.Params.custom_css.radius_item_menu }}
+            border-radius: {{ $.Site.Params.custom_css.radius_item_menu }};
+        {{ end }}
+
+        {{ with $.Site.Params.custom_css.color_item_menu }}
+            background-color: {{ $.Site.Params.custom_css.color_item_menu }};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.color_text_menu }}
+            color:{{ $.Site.Params.custom_css.color_text_menu }};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.size_text_menu }}
+            font-size:{{ $.Site.Params.custom_css.size_text_menu }} ;
+        {{ end }}
+        {{ with $.Site.Params.custom_css.width_item_element }}
+            width: {{ $.Site.Params.custom_css.width_item_element }};
+        {{ else }}
+            width: 100%;
+        {{ end }}
+        }
+
+        footer{
+        {{ with $.Site.Params.custom_css.background_color_footer }}
+            background-color: {{$.Site.Params.custom_css.background_color_footer}};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.color_text_footer}}
+            color: {{$.Site.Params.custom_css.color_text_footer}};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.size_footer }}
+            height: {{ $.Site.Params.custom_css.size_footer }};
+        {{ else }}
+            height: auto;
+        {{ end }}
+        }
+
+        footer a{
+        {{ with $.Site.Params.custom_css.size_text_footer }}
+            font-size: {{$.Site.Params.custom_css.size_text_footer}};
+        {{ end }}
+        {{ with $.Site.Params.custom_css.color_text_footer}}
+            color: {{$.Site.Params.custom_css.color_text_footer}};
+        {{ end }}
+        }
+
+        footer p{
+            {{ with $.Site.Params.custom_css.size_text_footer }}
+            font-size: {{$.Site.Params.custom_css.size_text_footer}};
+            {{ end }}
+        }
+
+        footer img{
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .love{
+            color: red;
+        }

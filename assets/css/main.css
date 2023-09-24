@@ -1,0 +1,127 @@
+/* http://meyerweb.com/eric/tools/css/reset/  - v2.0 | 20110126 - License: none (public domain)*/
+/* RESET.CSS*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding:0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body {	line-height: 1;}
+ol, ul { list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+/* END RESET.CSS*/
+
+/* GLOBAL STYLE*/
+.url-group{
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100%;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+.profile{
+    width: 100%;
+}
+
+.box-avatar{
+    overflow:hidden;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+.box-avatar:hover .avatar{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.avatar{
+    aspect-ratio: 1/1;
+    image-rendering: pixelated;
+}
+
+.main-description{
+    width: 90%;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+.box-ico{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+.icon-item{
+    border-radius: 100%;
+    list-style: none;
+}
+
+
+.icon-link{
+    border-radius: 100%;
+}
+
+.box-content{
+    justify-content: center;
+    flex-grow: 1;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+
+
+.menu{
+    width: 100%;
+}
+
+.url-item{
+    display: inline;
+    width: 100%;
+}
+
+.item-group{
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    margin: inherit;
+    outline: none;
+}
+
+.item-group{
+    animation-duration: 2s;
+    animation-name: parriba;
+}
+
+@keyframes parriba{
+    from{
+        margin-top:100%;
+        buttom:0%
+    }
+    to{
+        margin-buttom:0%;
+        width:100;
+    }
+}
+
+footer{
+    padding-top: 1.4em;
+    padding-bottom: 1.4em;
+    width: 100%;
+}
+
+footer p{
+    margin-top: 0.4em;
+}

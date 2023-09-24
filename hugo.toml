@@ -1,6 +1,34 @@
 languageCode = 'en-Es'
 title = 'LinkBox'
 
+[menu]
+	[[menu.main]]
+	name = 'githut'
+	url = 'https://github.com/deltronik/linkbox'
+	weight = 1
+	[[menu.main]]
+	name = 'Licence'
+	url = 'https://gitub.com/deltronik/linkbox/LICENSE'
+	weight = 2
+	[[menu.main]]
+	name = 'README'
+	url = 'https://github.com/deltronik/linkbox/README'
+	weight = 3
 [params]
+	description= "my linkbox site"
+	title = 'linkbox'
+	google_fonts= true
+	fonts = [["Josefin+sans","300,400,700"]]
+	local_fonts =  [{name="Orbit",file="Orbit/Oribit-Regular.ttf"}]
+[params.header]
+	enable_avatar=true
+	gravatar = false
+	avatar = 'image/avatar/avatar.png'
+	title_site = 'Linbox title'
+	paragraph = 'My linkbox site'
+	social_menu_bar = true
+[params.header.social_bar]
+	github = 'deltronik98'
+	blog = 'deltronik.net'
 
 

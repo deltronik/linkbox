@@ -1,0 +1,11 @@
+{{ if $.Site.Params.header.Gravatar }}
+<img src="https://www.gravatar.com/avatar/{{ md5 $.Site.Params.header.avatar }}" alt="Logo {{ .Title }}" class="avatar">
+{{ else }}
+    {{ if $.Site.Params.header.avatar }}
+    <img class="avatar"  src="{{ $.Site.Params.header.avatar }}" alt="Logo {{ .Title }}">
+    {{ else }}
+    <img src="{{ $.Site.Params.header.avatar_light}}" alt="Logo {{ .Title }}" id="avatar" class="avatar">
+    {{ $togglejs := resources.Get "js/toggle_theme.js" | resources.ExecuteAsTemplate "js/toggle_theme.js" . }}
+    <script src="{{ $togglejs.Permalink }}" defer ></script>
+    {{ end }}
+{{ end }}   
