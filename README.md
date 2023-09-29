@@ -1,7 +1,7 @@
 <h1 align='center'>LinkBox</h1> 
 Linkbox es un tema simple y sencillo para (HUGO)[https://go.io]  inspirado en linktree que te permitira organizar tus enlaces en un solo lugar
 
- <img href="https://github.com/deltronik/linkbox/blob/main/images/tn.png" alt="LinkBox Template for HUGO">
+![LinkBox Template for HUGO](https://github.com/deltronik/linkbox/blob/main/images/tn.png)
 
 #### Índice
 
