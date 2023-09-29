@@ -1,7 +1,7 @@
 <h1 align='center'>LinkBox</h1> 
-Linkbox es un tema simple y sencillo para [HUGO](https://gohugo.io/) inspirado en linktree que te permitira organizar tus enlaces en un solo lugar
+Linkbox es un tema simple y sencillo para (HUGO)[https://go.io]  inspirado en linktree que te permitira organizar tus enlaces en un solo lugar
 
-![LinkBox-tn](image/tn.png)
+ <img href="https://github.com/deltronik/linkbox/blob/main/images/tn.png" alt="LinkBox Template for HUGO">
 
 #### Índice
 
@@ -16,10 +16,10 @@ Linkbox es un tema simple y sencillo para [HUGO](https://gohugo.io/) inspirado e
 
 Exeptuando el framework mismo, LinkBox no necesita ninguna dependencia. Usted podria simplemente clonar este repositorio y configurarlo a su gusto desde el archivo `hugo.toml`. 
 LinkBox es relativamente facil de modificar, ya sea desde el archivo de configuración o directamente su codigo fuente:
-	
-	- Utiliza HTML, CSS y JS puros
-	- font-awesome
-	- google fonts and local fonts
+
+- Utiliza HTML, CSS y JS puros
+- font-awesome
+- google fonts and local fonts
 
 
 
