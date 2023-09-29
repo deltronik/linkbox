@@ -142,14 +142,53 @@ Un dato importante es que usted puede agregar tantas fuentes como requiera, lo c
 
 ```toml
 	google_fonts = true
-	fonts = [["Josefin+sans","300,400,700"]["nombre+de+fuente","weight"]]
+	fonts = [["Josefin+sans","300,400,700"],["nombre+de+fuente","weight"]]
 ```
 
 ###### 2. Fuentes locales
 
-Si usted tiene el archivo fuente descargado puede agregarlo en  `static/resources/fonts/` , esta dirección ya esta predefinida en la configuración del tema.
+Si usted tiene el archivo fuente descargado puede agregarlo en  `linkbox/static/resources/fonts/` , esta dirección ya esta predefinida en la configuración del tema.
 ```toml
-	local_fonts = [{name="nombre de la fuente",file="dirección completa del archivo"}{name="Orbit",file="Orbit/Orbit-Regular.ttf"]
+	local_fonts = [{name="nombre de la fuente",file="dirección completa del archivo"},{name="Orbit",file="Orbit/Orbit-Regular.ttf"}]
+```
+
+#### Header
+
+###### Avatar
+
+Puede configurar una imagen como avatar del sitio, esta imagen puede configurarla de tres maneras diferentes
+
+	1. Usar  [gravatar](https://es.gravatar.com/)
+	2. Usar una imagen de forma local
+	3. Usar dos imagenes de forma local, las cuales cambiaran dependiendo el tema (dark/light) del usuario
+
+**avatar mediante gravatar**
+
+```toml
+	# active la visualización del avatar
+	enable_avatar = true
+	# Active gravatar
+	gravatar = true
+	# ingrese su dirección de correo para enlazar gravatar
+	avatar = 'mi-correo@gmail.com'
+```
+
+**avatar local**
+
+```toml
+	# active la visualización del avatar
+	enable_avatar = true
+	# establesca la dirección de la imagen que desea utilizar, recuerde que su carpeta raiz es 'static'
+	avatar = 'image/avatar/avatar.png'
+```
+
+**avatar toggle**
+
+```toml
+	enable_avatar = true
+	gravatar = false
+	avatar_light = 'image/avatar/avatarLight.png'
+	avatar_dark = 'image/avatar/avatarDark.png'
 ```
 
 #### Menu
