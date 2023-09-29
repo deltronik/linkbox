@@ -74,6 +74,11 @@ title = 'LinkBox'
         name = 'LinkBox'
         url = 'https://github.com/deltronik/linkbox'
         weight = 1
+	[[menu.main]]
+	name = 'DelTronik'
+	url = 'https://deltronik.net'
+	weight = 2
+
 [params]
         description= "my linkbox site"
         title = 'linkbox'
@@ -118,6 +123,33 @@ Puede modifcar las etiquetas Meta del sitio mediante las siguientes lineas:
 	keywords = "site, linktree, social media"
 	# autor del sitio
 	author = 'DANH'
+```
+
+#### Fuentes
+Usted puede configurar fuentes mediante dos metodos:
+
+  1. Fuentes de [google fonts](https://fonts.google.com/)
+  2. Fuentes locales
+
+###### 1. Google fonts
+
+```toml
+	# active google fonts
+	google_fonts = true
+```
+
+Un dato importante es que usted puede agregar tantas fuentes como requiera, lo cual no es recomendable, pero es posible. Solo recuerde que si el nombre de la fuente es por ejemplo 'Josefin sans' remplaze el espacio ` ` con el '+', es decir el nombre de la fuente quedaria de la siguiente forma `Josefin+sans`.
+
+```toml
+	google_fonts = true
+	fonts = [["Josefin+sans","300,400,700"]["nombre+de+fuente","weight"]]
+```
+
+###### 2. Fuentes locales
+
+Si usted tiene el archivo fuente descargado puede agregarlo en  `static/resources/fonts/` , esta dirección ya esta predefinida en la configuración del tema.
+```toml
+	local_fonts = [{name="nombre de la fuente",file="dirección completa del archivo"}{name="Orbit",file="Orbit/Orbit-Regular.ttf"]
 ```
 
 #### Menu

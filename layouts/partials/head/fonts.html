@@ -15,6 +15,7 @@
 	{{ end }}
 {{ end }}
 {{/* Fonts Local */}}
+
 {{ if .Site.Params.local_fonts }}
 	{{ range .Site.Params.locale_fonts }}
 	<link rel="preload" href="{{ printf "resources/fonts/%s" .file }}" as="font" type="font/ttf" crossorigin>
