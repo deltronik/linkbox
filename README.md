@@ -1,31 +1,45 @@
-# Índice
+<h1 align='center'>LinkBox</h1> 
+Linkbox es un tema simple y sencillo para [HUGO](https://gohugo.io/) inspirado en linktree que te permitira organizar tus enlaces en un solo lugar
 
-* [Introducción](#introduccion)
+![LinkBox-tn](image/tn.png)
+
+#### Índice
+
+* [Feature](#feature)
 * [Instalación](#instalacion)
 * [Uso](#uso)
 * [Documentación](#documentacion)
 * [Contributing](#contributing)
 * [Contacto](#contacto)
 
-## Introducción
+## Feature (#feature)
 
-[Introducción](#introduccion)
+Exeptuando el framework mismo, LinkBox no necesita ninguna dependencia. Usted podria simplemente clonar este repositorio y configurarlo a su gusto desde el archivo `hugo.toml`. 
+LinkBox es relativamente facil de modificar, ya sea desde el archivo de configuración o directamente su codigo fuente:
+	
+	- Utiliza HTML, CSS y JS puros
+	- font-awesome
+	- google fonts and local fonts
 
-Este es un ejemplo de un índice con enlaces.
+
 
 ## Instalación
 
 [Instalación](#instalacion)
 
-Para instalar el proyecto, sigue estos pasos:
+Para utilizar el proyecto y configurarlo de forma local, sigue estos pasos:
 
 1. Instala Hugo.
-2. Crea un nuevo repositorio de GitHub.
+2. Inicie un nuevo proyecto medianto `hugo new site my-new-site`
 3. Clona el repositorio de Linkbox en tu computadora.
-4. Copia el contenido del directorio `site` a tu nuevo repositorio.
-5. Crea un archivo `config.toml` en la raíz de tu repositorio.
-6. En el archivo `config.toml`, configura los enlaces que deseas mostrar en tu página web.
-7. Ejecuta el comando `hugo` para generar tu página web.
+4. Copie la carpeta LinkBox dentro de la carpeta 'theme'
+5. indique el tema mediante `theme= 'linkbox'` en su archivo de configuración
+6. inicie un servidor local para comprobar el funcionamientos con `hugo server`
+
+Para utilizar el proyecto y configurarlo de forma remota, sigue estos pasos:
+
+1. Clone este repositorio
+2. Inicie github actions o despliegue desde netlify. El repositorio contiene el archivo para el despliege de github page `.github/workflows/hugo.yaml` y el archivo `netlify.toml` que le permitiran desplegar desde la plataforma de su elección
 
 ## Uso
 

@@ -1,6 +1,11 @@
 languageCode = 'en-Es'
 title = 'LinkBox'
 
+[module]
+	[module.hugoVersion]
+	extended = false
+	min = '0.118.2'
+
 [menu]
 	[[menu.main]]
 	name = 'githut'
