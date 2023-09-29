@@ -42,21 +42,21 @@ Confio en que el sitio es tan básico que no se requiere de altos niveles de con
 ```bash
 linkbox
 ├── archetypes
-│		 └── default.md
+│	└── default.md
 ├── assets
-│		├── css
-│		└── js
+│	├── css
+│	└── js
 ├── content
-│	 └── index.md
+│	└── index.md
 ├── layouts
-│		 ├── _default
+│	├── _default
 │		 └── partials
 ├── static
-		 ├── image
-		 │		 ├── avatar
-		 │		 ├── background
-		 │		 └── favicon
-		 └── fonts
+	├── image
+	│	├── avatar
+	│	├── background
+	│	└── favicon
+	└── fonts
 ```
 
 Como todos los temas de hugo linkbox utiliza el tipico arbol de archivo, siendo la carpeta `static` a carpeta raiz de su pagina, algunas carpetas como `fonts/` ya estan pre-establecidas en la configuración del sitio, otras como `avatar/` pueden llegar a ser opcionales. Pero no se preocupe esto iremos viendolo poco a poco mientras configuramos el sitio.
@@ -91,4 +91,37 @@ title = 'LinkBox'
         blog = 'deltronik.net'
 ```
 
-luego realice un `hugo server` para comprobar su sitio web
+luego realice un `hugo server` para comprobar su sitio web.
+
+### Parametros
+
+Si esta siguiendo de forma lineal el README ya tendra un modelo de pagina funcional, de ahora en adelante empezaremos a modificar el resto del sitio.
+Habrá notado que el sitio se carga con estilos preterminados, estos veremos como editarlos facilmente desde el archivo `hugo.toml` mas adelante, pero siempre es libre de editar el archivo `linkbox/assets/css/template_style.css` claro que siempre que tenga conocimientos de CSS.
+
+#### Hugo.toml
+
+Puede iniciar la edición del archivo hugo.toml o config.toml con las siguientes lineas
+```toml
+languageCode = 'en-Es'
+title = 'titulo que se mostrara en la barra del navegador'
+theme = 'linkbox'
+```
+#### Menu
+
+Linkbox respeta la sintaxis de un menu tipico de Hugo:
+```toml
+[menu]
+	[[menu.main]]#indique que configurara un item para el menu
+	# incluir algo antes del nombre (puede incluir html)
+	pre = '<i class="fa-brands fa-blog"></i>'
+	# Nombre que se mostrara en el menu
+	name = 'Item One'
+	# incluir algo despues del nombre (puede incluir html)
+	post = ''
+	# Enlace del item
+	url = 'http://localhost:3300'
+	# posición (de arriba abajo)
+	weight = 1
+```
+
+Puede agregar tantos items para el menu como necesite, los parametros post y pre puede no incluirlos si solo requiere mostrar el nombre de sitio al que quiere redireccionar. En caso de querer agregarle un icono recomiendo usar los brands de [font-awesome](https://fontawesome.com/).
