@@ -1,16 +1,7 @@
 <h1 align='center'>LinkBox</h1> 
-Linkbox es un tema simple y sencillo para (HUGO)[https://go.io]  inspirado en linktree que te permitira organizar tus enlaces en un solo lugar
+Linkbox es un tema simple y sencillo para [HUGO](https://gohugo.io/) inspirado en linktree que te permitira organizar tus enlaces en un solo lugar
 
 ![LinkBox Template for HUGO](https://github.com/deltronik/linkbox/blob/main/images/tn.png)
-
-#### Índice
-
-* [Feature](#feature)
-* [Instalación](#instalacion)
-* [Uso](#uso)
-* [Documentación](#documentacion)
-* [Contributing](#contributing)
-* [Contacto](#contacto)
 
 ## Feature (#feature)
 
@@ -50,12 +41,54 @@ Para usar el proyecto, sigue estos pasos:
 1. Personaliza el template para que se adapte a tus necesidades.
 2. Carga el template en tu servidor web.
 
-## Documentación
+### 1. Personalice el tema a sus necesidades
 
-[Documentación](#documentacion)
+Las siguientes instrucciones son para construir el sitio desde el archivo `hugo.toml`, LinkBox puede configurarse y editarse desde este mismo sin necesidad de alterar su codigo fuente. Si usted tiene conocimientos en desarrollo web es bienvenido a revizar el codigo, LinkBox es realmente simple que no necesitaria grandes conocimientos para modificarlo desde el codigo fuente
 
-La documentación de Linkbox se encuentra en el repositorio de GitHub.
+#### Configuración basica
 
+En su archibo `hugo.toml` escriba lo siguiente:
+
+```toml
+	 languageCode = 'es-Es'
+	 title = 'mi-title'
+```
+Luego inicie un servidor local para comprobar la funcionalidad de su nueva pagina mediante `$ hugo server`. Con esto sera mas que suficiente para iniciar el sitio con el tema LinkBox
+
+#### Link Menu
+
+Para agregar enlaces LinkBox respeta la sintaxis de cualquier menu de hugo. Por ejemplo:
+
+```toml
+[menu]
+        [[menu.main]]
+        name = 'githut'
+        url = 'https://github.com/deltronik/linkbox'
+        weight = 1
+        [[menu.main]]
+        name = 'Licence'
+        url = 'https://gitub.com/deltronik/linkbox/LICENSE'
+        weight = 2
+```
+Usten puede agregar tantos enlaces como necesite y ordenarlos a su gusto mediante `weight`
+
+###### Link Menu Pre / Post
+
+Opcionalmente, si usted prefiere puede agreagar instrucciones o iconos antes o despues del nombre del enlace. Por ejemplo:
+
+```toml
+[menu]
+        [[menu.main]]
+        pre = '<i class="fa-brands fa-github>'
+        name = 'githut'
+        url = 'https://github.com/deltronik/linkbox'
+        weight = 1
+        [[menu.main]]
+        name = 'Licence'
+        url = 'https://gitub.com/deltronik/linkbox/LICENSE'
+        weight = 2
+        post = '<i class="fa-brands fa-github">'
+```
 ## Contributing
 
 [Contributing](#contributing)
