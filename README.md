@@ -59,7 +59,7 @@ linkbox
 	└── fonts
 ```
 
-Como todos los temas de hugo linkbox utiliza el tipico arbol de archivo, siendo la carpeta `static` a carpeta raiz de su pagina, algunas carpetas como `fonts/` ya estan pre-establecidas en la configuración del sitio, otras como `avatar/` pueden llegar a ser opcionales. Pero no se preocupe esto iremos viendolo poco a poco mientras configuramos el sitio.
+Como todos los temas de hugo linkbox utiliza el tipico arbol de archivo, siendo la carpeta `static` la carpeta raiz de su pagina, algunas carpetas como `fonts/` ya estan pre-establecidas en la configuración del sitio, otras como `avatar/` pueden llegar a ser opcionales. Pero no se preocupe esto iremos viendolo poco a poco mientras configuramos el sitio.
 
 ### Construir el sitio
 
@@ -106,6 +106,20 @@ languageCode = 'en-Es'
 title = 'titulo que se mostrara en la barra del navegador'
 theme = 'linkbox'
 ```
+
+#### Meta
+Puede modifcar las etiquetas Meta del sitio mediante las siguientes lineas:
+
+```toml
+[params]
+	# descripción del sitio
+	description = 'This is a site of hugo with linkbox theme'
+	#  Palabras claves del sitio
+	keywords = "site, linktree, social media"
+	# autor del sitio
+	author = 'DANH'
+```
+
 #### Menu
 
 Linkbox respeta la sintaxis de un menu tipico de Hugo:
