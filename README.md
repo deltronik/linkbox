@@ -11,6 +11,7 @@ Linkbox es un tema diseñado para <a href="https://gohugo.io/">Hugo</a> e inspir
 * [Uso](#uso)
 * [Personalización](#personalizacion)
 
+
 ## [Requisitos](#requisitos)
 
 * Trabajar en local
@@ -263,3 +264,110 @@ Linkbox respeta la sintaxis de un menu tipico de Hugo:
 ```
 
 Puede agregar tantos items para el menu como necesite, los parametros post y pre puede no incluirlos si solo requiere mostrar el nombre de sitio al que quiere redireccionar. En caso de querer agregarle un icono recomiendo usar los brands de [font-awesome](https://fontawesome.com/).
+
+#### Footer
+
+De momento no hay mucha configuración activa para el footer, estructuralmente hablando tratare de mejorar esto en futuras revisiones.
+Por otro lado puedes modificar el archivo `layout/partial/footer.html`
+
+## [Personalización](#personaizacion)
+
+Por defecto el tema cargara un archivo de estilos preterminados `template_style.css` puedes editar este archivo para modificar la visualización del sitio.
+En otras circunstancias LinkBox puede cargar opcionalmente al igual que en el caso de la imagen avatar hojas de estilos a selección del usuario:
+
+ 1. Preterminado del tema `template_style.css`
+ 2. Personalizado tema simple `simple_style.css`
+ 3. Personalizado tema adaptativo al tema (dark/light) del usuario `toggle_theme.css`
+
+#### 1. Preterminado del tema
+
+Este se cargara automaticamente, no necesita hacer nada.
+
+#### 2. Personalizado simple
+
+active los estilos personalizados con `[params.custom_css]`a continuación la lista de propiedades modificables:
+
+```toml
+
+[params.custom_css]
+	# color de fondo
+	background_color_body = 'rgb,hexadecimal,name-color,etc..'
+	# imagen de fondo
+	background_image_body = 'url, recuerde que su rais es la carpeta css en public'
+	# Si utiliza una imagen como fondo puede editar otras propiedades como
+	# Puede consultar https://developer.mozilla.org/es/docs/Web/CSS/background
+	attachment_image = 'fixed'
+	size_image = 'cover'
+	position_image = 'top'
+	repeat_image = 'no-repeat'
+	# Color del texto
+	color_text = 'black'
+	# Contenedor de los elementos del sitio
+	# Color del contenedor, puede obviar si no quiere visualizar este contenedor
+	background_color_container = '#fff00'
+	# redondeo de las puntas superiores del contenedor
+	borde_radius_container = '15px'
+	# ancho del contenedor
+	width_container = '90%'
+	# separación entre el borde superior del navegador y el contenedor
+	top_container = '2em'
+	# circunbalación del avatar
+	radius_avatar = '15px'
+	# tamaño del avatar
+	size_avatar = '120px'
+	# separación entre el borde superior del contenedor y la imagen avatar
+	top_avatar = '2em'
+	# Separación entre el avatar y el titulo [si es que existe]
+	divisor_avatar_title = '1em'
+	#  fuente (fonts) para el titulo
+	font_title = 'Roboto'
+	# Tamaño del titulo
+	size_title = '2em'
+	# ancho de la letra titulo(grosor?)
+	weight_title = '100%'
+	# style del titulo
+	style_title = 'italic'
+	# variante
+	variant_title = 'none'
+	# stretch_title = 'expaded'
+	# Divisor entre el titulo y la descripción o frase
+	divisor_title_description = '8px'
+	# tamaño de texto
+	description_size = '0.8em'
+	# Divisor de la descripción y la barra de iconos
+	divisor_description_icon
+	# Si por alguna loca razon quiere agregar color fondo a los iconos
+	color_back_icon = 'none'
+	# separación entre iconos (el espacio multiplicado en 2)
+	separate_icon = '8px'
+	# Colores de los iconos
+	color_icon
+	# tamaño de los iconos
+	size_icon = '1em'
+	# divisor entre el menu y la barra de iconos
+	divisor_menu_header = '4em'
+	# divisor entre el menu y el pie de pagina
+	divisor_menu_footer = '4em'
+	# ancho de los items del menu
+	widht_menu = '100%'
+	# Separación entre items
+	divisor_item_menu = '1em'
+	# redondear items
+	radius_item_menu = '0px'
+	# color de los items
+	color_item_menu = 'white'
+	# color del texto de los items
+	color_text_menu = 'black'
+	# tamaño del texto de los items
+	color_text_menu = '1em'
+	# ancho de los items  '100%' recomendado, si le da un tamaño menor puede enlistar de 2 en 2 o mas
+	widht_item_element = '100%'
+	# Color de fondo pie de pagina
+	background_color_footer = 'red'
+	# color de texto pie de pagina
+	color_text_footer = 'white'
+	# tamaño del pie de pagina
+	size_footer = '4em'
+
+```
+
