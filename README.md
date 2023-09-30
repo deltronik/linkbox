@@ -335,13 +335,13 @@ active los estilos personalizados con `[params.custom_css]`a continuación la li
 	# tamaño de texto
 	description_size = '0.8em'
 	# Divisor de la descripción y la barra de iconos
-	divisor_description_icon
+	divisor_description_icon = '1em'
 	# Si por alguna loca razon quiere agregar color fondo a los iconos
 	color_back_icon = 'none'
 	# separación entre iconos (el espacio multiplicado en 2)
 	separate_icon = '8px'
 	# Colores de los iconos
-	color_icon
+	color_icon = 'white'
 	# tamaño de los iconos
 	size_icon = '1em'
 	# divisor entre el menu y la barra de iconos
@@ -371,3 +371,27 @@ active los estilos personalizados con `[params.custom_css]`a continuación la li
 
 ```
 
+##### Personalizado adaptable
+
+Para activar a hoja de estilo que se modifique dependiendo del tema solo debe añadir:
+
+`theme_toggle = true`
+
+En el archivo de configuración, tenga en cuenta que en caso de estar activo y no declare las propiedades para el uno de los temas (dark/light) este mostrara la pagina sin estilos.
+Para añadir propiedades al tema dark solo añada la cadena 'dark_' antes de cada parametro del tema simple, siendo asi, las propiedades del tema simple para el modo light y al añadir la cadena para el modo dark
+
+```toml
+[params.custom_css]
+	theme_toggle = true
+	# Color de fondo modo light
+	background_color_body = 'white'
+	# Color de fondo modo dark
+	dark_backgound_color_body = 'black'
+	# Imagen de fondo modo light
+	background_image_body = '../image/background.jpg'
+	# Imagen de fondo modo dark
+	dark_background_image_body = '../image/background.jpg'
+```
+
+Puede agregar la cadena 'dark_' antes de cada atributo que tenga que ver con el color, fuente o tamaño del elemento. Esto es algo que mejorare en futuras revisiones
+Recuerde que las unidades de medidas y valores de colores permitidos son todas las permitidas en CSS. Para mas información: [css](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units).
