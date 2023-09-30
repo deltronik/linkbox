@@ -21,12 +21,12 @@ Linkbox es un tema diseñado para <a href="https://gohugo.io/">Hugo</a> e inspir
 	1. fork a este repositorio
 
 ## [Instalación](#instalacion)
- 
+
  * Instalación para edición en local
  	1. Descarge el archivo comprimido aquí o clone el repositorio
  	2. Copie la carpeta LinkBox dentro de la carpeta `themes`
  	3. Edite el archivo de construción `hugo.toml` con la siguiente linea: `theme='linkbox'`
- 
+
  * Instalación para edición desde github
  	1. fork a este repositorio
  	2. Edite el archivo de construcción `hugo.toml`
@@ -158,9 +158,9 @@ Si usted tiene el archivo fuente descargado puede agregarlo en  `linkbox/static/
 
 Puede configurar una imagen como avatar del sitio, esta imagen puede configurarla de tres maneras diferentes
 
-	1. Usar  [gravatar](https://es.gravatar.com/)
-	2. Usar una imagen de forma local
-	3. Usar dos imagenes de forma local, las cuales cambiaran dependiendo el tema (dark/light) del usuario
+ 1. Usar  [gravatar](https://es.gravatar.com/)
+ 2. Usar una imagen de forma local
+ 3. Usar dos imagenes de forma local, las cuales cambiaran dependiendo el tema (dark/light) del usuario
 
 **avatar mediante gravatar**
 
@@ -190,6 +190,59 @@ Puede configurar una imagen como avatar del sitio, esta imagen puede configurarl
 	avatar_light = 'image/avatar/avatarLight.png'
 	avatar_dark = 'image/avatar/avatarDark.png'
 ```
+
+##### Titulo y descripción
+
+```toml
+	# Puede agregar un titulo diferente al de la pestaña si lo desea
+	title_site = 'my-site'
+	# Tambien puede agregar una descripción u slogan
+	paragraph = 'el cafe con leche es como el cafe, pero con leche'
+```
+
+##### Barra de iconos
+
+Para utilizar los enlaces por iconos solo debera incluir el nombre de la red social, app o pagina web a la que quiera enlazar seguida de su usuario en la mayoria de los casos, en otras debera proporcionar el link completo a su perfil. De momento no todas las redes sociales estan soportadas si usted tiene conocimientos de desarrollo web puede añadir la que desee en el archivo `layout/partial/header/social_bar.html`.
+
+```toml
+	[params.header.social_bar]
+	github = 'user'
+	gitlab = 'user'
+	facebook = 'user'
+	instagram = 'user'
+	twitter = 'user'
+	mastodon = 'user'
+	linkedin = 'user'
+	youtube = 'chanel'
+	pinterest = 'user'
+	tiktok = 'user'
+	reddit = 'user'
+	snapchat = 'user'
+	whatsapp = 'number'
+	telegram = 'user'
+	wordpress = 'url'
+	wix = 'url'
+	stack_overflow = 'user'
+	sound_cloud = 'user'
+	spotify = 'user'
+	apple_music = 'user'
+	bandcamp = 'user'
+	vimeo = 'user'
+	daylamotion = 'user'
+	twitch = 'chanel'
+	cafecito = 'user'
+	tesito = 'user'
+	onlyfans = 'user'
+	patreon =  'user'
+	paypal = 'url'
+	blog = 'url'
+	personal_site = 'url'
+	curriculum = 'url'
+	steam = 'user'
+	kickstarter = 'url'
+```
+
+En caso no querer incluir los iconos, solo el echo de no escribirlos ya lo desactiva, por ello solo escriba aquellos iconos que quiera que se muestre e ignore el resto de la lista.
 
 #### Menu
 
