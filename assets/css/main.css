@@ -16,7 +16,6 @@ table {border-collapse: collapse;border-spacing: 0;}
 }
 
 body{
-    height: 100vh;
     height: 100dvh;
     width: 100%;
 }
@@ -24,8 +23,8 @@ body{
 .container{
     display: flex;
     flex-direction: column;
+    min-height: 100dvh;
     text-align: center;
-    min-height: 100%;
     margin-inline-end: auto;
     margin-inline-start: auto;
 }
