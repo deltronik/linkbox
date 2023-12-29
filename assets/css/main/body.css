@@ -5,7 +5,27 @@
         {{end}}
         {{ with $.Site.Params.style.backImg }}
         background-image:url({{$.Site.Params.style.backImg}});
-        {{ end }}
+        	{{ with  $.Site.Params.style.repeatImg }}
+	background-repeat:{{ $.Site.Params.style.repeatImg }};
+		{{ else }}
+	background-repeat: no-repeat;
+		{{ end }}
+		{{ with $.Site.Params.style.attachmentImg }}
+	background-attachment: {{ $.Site.Params.style.attachmentImg }};
+		{{ else }}
+	background-attachment: fixed;
+		{{ end }}
+		{{ with $.Site.Params.style.positionImg  }}
+	background-position: {{ $.Site.Params.style.positionImg }};
+		{{ else }}
+	background-position: center;
+		{{ end }}
+		{{ with $.Site.Params.style.sizeImg }}
+	background-size:{{ $.Site.Params.style.sizeImg }};
+		{{ else }}
+	background-size: cover;
+		{{ end }}
+	{{ end }}
     }
 @media (prefers-color-scheme: dark){
     body{
@@ -18,7 +38,27 @@
         {{end}}
         {{ with $.Site.Params.style.backImgDark }}
         background-image:url({{$.Site.Params.style.backImgDark}});
-        {{else}}
+	        {{ with  $.Site.Params.style.repeatImg }}
+        background-repeat:{{ $.Site.Params.style.repeatImg }};
+                {{ else }}
+        background-repeat: no-repeat;
+                {{ end }}
+                {{ with $.Site.Params.style.attachmentImg }}
+        background-attachment: {{ $.Site.Params.style.attachmentImg }};
+                {{ else }}
+        background-attachment: fixed;
+                {{ end }}
+                {{ with $.Site.Params.style.positionImg  }}
+        background-position: {{ $.Site.Params.style.positionImg }};
+                {{ else }}
+        background-position: center;
+                {{ end }}
+                {{ with $.Site.Params.style.sizeImg }}
+        background-size:{{ $.Site.Params.style.sizeImg }};
+                {{ else }}
+        background-size: cover;
+                {{ end }}
+	{{else}}
             {{ with $.Site.Params.style.backImg }}
         background-image:url({{$.Site.Params.style.backImg}});
             {{ end }}

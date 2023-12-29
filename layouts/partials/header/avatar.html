@@ -1,6 +1,6 @@
 <a class="link-group" href="{{ $.Site.BaseURL}}">
 {{- with $.Site.Params.header.gravatar }}
-    <img src="https://www.gravatar.com/avatar/{{ md5 $.Site.Params.header.gravatar }} " alt="{{if $.Site.Params.header.alt_img }}{{$.Site.Params.header.alt_img}}{{else}}'Logo {{$.Site.Title}}'{{end}}" class="avatar">
+    <img src="https://www.gravatar.com/avatar/{{ md5 $.Site.Params.header.gravatar | safeURL }} " alt="{{if $.Site.Params.header.alt_img }}{{$.Site.Params.header.alt_img}}{{else}}'Logo {{$.Site.Title}}'{{end}}" class="avatar">
 {{- else }}
     {{- if $.Site.Params.header.avatar_dark }}
     <img src="{{$.Site.Params.header.avatar_dark }}" class="avatar" id="avatar" alt="{{if $.Site.Params.header.alt_img }}{{$.Site.Params.header.alt_img }}{{else}}'Logo{{$.Site.Title }}'{{end}}">
@@ -18,6 +18,6 @@
         {{- with $.Site.Params.header.avatar }}
         <img src="{{$.Site.Params.header.avatar }}" class="avatar" id="avatar" alt="{{if $.Site.Params.header.alt_img }}{{$.Site.Params.header.alt_img }}{{else}}'Logo{{$.Site.Title }}'{{end}}">
         {{- end }}
-    {{- end }}    
+    {{- end }}
 {{- end }}
 </a>

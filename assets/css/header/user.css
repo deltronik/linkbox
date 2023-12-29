@@ -56,7 +56,11 @@
         {{ with $.Site.Params.style.user.textSeparate }}
     margin-bottom:{{$.Site.Params.style.user.textSeparate}};
         {{ end }}
-    }
+	{{ with $.Site.Params.style.user.textFamily }}
+    font-family:{{ $.Site.Params.style.user.textFamily }};
+	{{ end }}
+
+   }
     @media( prefers-color-scheme: dark ){
         .user-site{
         {{ with $.Site.Params.style.user.titleColorDark }}

@@ -1,0 +1,21 @@
+{{/*Favicon*/}}
+{{ if .Site.Params.Favicon }}
+	{{ $faviPath :=  $.Site.Params.Favicon }}
+<link rel="shortcut icon" href="{{ $faviPath.Permalink }}/favicon.ico" type="ico">
+<link rel="apple-touch-icon" href="{{ $faviPath.Permallink }}/apple-touch-icon">
+<link rel="shortcut icon" href="{{ $faviPath.Permalink }}/favicon-16x16.png" >
+<link rel="shortcut icon" href="{{ $faviPath.Permalink }}/favicon-32x32.png" >
+<link rel="shortcut icon" href="{{ $faviPath.Permalink }}/android-chrome-192x192.png">
+<link rel="shortcut icon" href="{{ $faviPath.Permalink }}/android-chrome-512x512.png">
+<link rel="manifest" href="{{ $faviPath.Permalink }}/site.webmanifest">
+{{ else }}
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon/favicon.ico" type="ico">
+<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}img/favicon/apple-touch-ico">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon/favicon-32x32.png">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon/android-chrome-192">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon/android-chrome-512">
+<link rel="manifest" href="{{ .Site.BaseURL }}img/favicon/site.webmanifest">
+{{ end }}
+
+

@@ -25,10 +25,10 @@ enableRobotsTXT = true
    	 user = "LinkBox"
 	paragraph = "Cuando los electrones se mueven las cosas suceden"
 	avatar = "img/avatar/avatar.png"
-        [params.header.icons]
-        github = "esooo"
-		gitlab = "esoo"
-		x = "x"
+#        [params.header.icons]
+#        github = "esooo"
+#		gitlab = "esoo"
+#		x = "x"
     [params.footer]
     description = "Cuando los electrones se mueven las cosas suceden"
     creator = true
@@ -36,6 +36,10 @@ enableRobotsTXT = true
 [params.style]
 	backImg = 'img/background/background.jpg'
 	backColor = "white"
+#	repeatImg
+#	attachmentImg
+#	positionImg
+#	sizeImg
 		[params.style.user]
 		imgSize = "150px"
 		imgRad  = "15px"
@@ -46,6 +50,7 @@ enableRobotsTXT = true
 		titleColor = "black"
 		textColor = "black"
 		textSeparate = "15px"
+		textFamily = "Orbit"
 		textSize = "1.1em"
 		[params.style.icons]
 		color = "black"
