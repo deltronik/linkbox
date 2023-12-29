@@ -6,15 +6,15 @@ enableRobotsTXT = true
 [menu]
 	[[menu.main]]
     pre = "<i class='fa-brands fa-github'></i>"
-	name = 'githut'
-	url = '#'
+	name = 'github'
+	url = 'https://github.com/deltronik/linkbox'
 	post = ""
     weight = 1
 	[[menu.main]]
 	pre = ""
-	name = 'gitlab'
-	url = "#"
-	post = "<i class='fa-brands fa-gitlab'></i>"
+	name = 'licence'
+	url = "https://github.com/deltronik/linkbox/LICENSE"
+	post = "<i class='fa-solid fa-file-circle-check'></i>"
 	weight = 2
 
 [params]
@@ -22,10 +22,9 @@ enableRobotsTXT = true
 	local_fonts = [{name="Orbit", file="Orbit/Orbit-Regular.ttf"}]
     [params.header]
 #	gravatar = "deltronik98@gmail.com"
-    user = "LinkBox"
+   	 user = "LinkBox"
 	paragraph = "Cuando los electrones se mueven las cosas suceden"
-    avatar = "img/logo-light.svg"
-	avatar_dark = "img/logo-dark.svg"
+	avatar = "img/avatar/avatar.png"
         [params.header.icons]
         github = "esooo"
 		gitlab = "esoo"
@@ -35,43 +34,35 @@ enableRobotsTXT = true
     creator = true
 #	license ="esto es una licencia"
 [params.style]
-	backImg = 'backDark.svg'
-	backImgDark = 'backLight.svg'
-	backColor = "red"
-	backColorDark = "blue"
+	backImg = 'img/background/background.jpg'
+	backColor = "white"
 		[params.style.user]
-		imgSize = "120px"
-		imgRad  = "50%"
+		imgSize = "150px"
+		imgRad  = "15px"
 		imgSeparate = "4em"
 		titleSeparate  = "10px"
 		titleSize = "2em"
-		titleFamily = "Orbit"
+		titleFamily = "system-ui"
 		titleColor = "black"
-		textColor = "white"
-		textColorDark = "yellow"
-		textSeparate = "20px"
-		textSize = "18px"
+		textColor = "black"
+		textSeparate = "15px"
+		textSize = "1.1em"
 		[params.style.icons]
-		color = "red"
-		colorDark = "Dark"
-		size = "2em"
+		color = "black"
+		size = "1.5em"
 		[params.style.menu]
 		textColor = "white"
-		textColorDark = "black"
 		textSize = "2em"
 		textFamily = "Josefin Sans"
-		itemColor = "green"
-		itemColorDark = "yellow"
+		itemColor = "black"
 		itemSeparate = "2em"
-		itemSize = "4em"
-		itemWidth = "80%"
+		itemSize = "3em"
+		itemWidth = "90%"
 		itemRad = "15px"
 		[params.style.footer]
-		backColor = "red"
-		backColorDark = "green"
+		backColor = "black"
 		footerSize = "auto"
 		textSize = "14px"
 		textColor = "white"
-		textColorDark = "black"
 		footerWidth = "100%"
 		rad = "0px"
