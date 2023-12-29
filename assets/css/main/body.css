@@ -1,0 +1,28 @@
+{{ with $.Site.Params.style }}
+    body{
+        {{ with $.Site.Params.style.backColor }}
+        background-color:{{$.Site.Params.style.backColor}};
+        {{end}}
+        {{ with $.Site.Params.style.backImg }}
+        background-image:url({{$.Site.Params.style.backImg}});
+        {{ end }}
+    }
+@media (prefers-color-scheme: dark){
+    body{
+        {{ with $.Site.Params.style.backColorDark }}
+        background-color:{{$.Site.Params.style.backColorDark}};
+        {{else}}
+            {{ with $.Site.Params.style.backColor }}
+        background-color:{{$.Site.Params.style.backColor}};
+            {{end}}
+        {{end}}
+        {{ with $.Site.Params.style.backImgDark }}
+        background-image:url({{$.Site.Params.style.backImgDark}});
+        {{else}}
+            {{ with $.Site.Params.style.backImg }}
+        background-image:url({{$.Site.Params.style.backImg}});
+            {{ end }}
+        {{end}}
+    }
+}
+{{ end }}

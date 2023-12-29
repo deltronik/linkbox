@@ -1,0 +1,21 @@
+{{ if $.Site.Params.style.icons }}
+    .social-bar{
+        {{ with $.Site.Params.style.icons.color}}
+    color:{{$.Site.Params.style.icons.color}};
+        {{end}}
+        {{ with $.Site.Params.style.icons.size }}
+    font-size:{{$.Site.Params.style.icons.size}};
+        {{end}}
+    }
+    @media( prefers-color-scheme: dark ){
+        .social-bar{
+            {{ with $.Site.Params.style.icons.colorDark }}
+        color:{{ $.Site.Params.style.icons.colorDark }};
+            {{ else }}
+                {{ with $.Site.Params.style.icons.color}}
+        color:{{$.Site.Params.style.icons.color}};
+                {{ end }}
+            {{end}}
+        }
+    }
+{{ end }}

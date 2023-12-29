@@ -1,0 +1,54 @@
+{{ with $.Site.Params.style.menu }}
+.box-item .link-group{
+    {{with $.Site.Params.style.menu.textColor }}
+    color: {{$.Site.Params.style.menu.textColor }};
+    {{end}}
+    {{ with $.Site.Params.style.menu.textSize }}
+    font-size:{{$.Site.Params.style.menu.textSize}};
+    {{end}}
+}
+
+.item{
+    {{with $.Site.Params.style.menu.itemRad}}
+    border-radius: {{$.Site.Params.style.menu.itemRad}};
+    {{end}}
+    {{with $.Site.Params.style.menu.itemSize}}
+    height:{{$.Site.Params.style.menu.itemSize}};
+    {{end}}
+    {{with $.Site.Params.style.menu.itemWidth}}
+    width:{{$.Site.Params.style.menu.itemWidth}};
+    {{end}}
+    {{ with $.Site.Params.style.menu.itemSeparate }}
+    margin-bottom:{{$.Site.Params.style.menu.itemSeparate}};
+    {{end}}
+    {{ with $.Site.Params.style.menu.itemColor}}
+    background-color:{{$.Site.Params.style.menu.itemColor}};
+    {{end}}
+    {{ with $.Site.Params.style.menu.textFamily }}
+    font-family:'{{$.Site.Params.style.menu.textFamily }}';
+    {{ end }}
+}
+
+
+{{/*toggle theme*/}}
+@media( prefers-color-scheme: dark ){
+    .link-group{
+    {{ with $.Site.Params.style.menu.textColorDark }}
+    color:{{$.Site.Params.style.menu.textColorDark }}
+    {{else}}
+        {{with $.Site.Params.style.menu.textColor }}
+    color: {{$.Site.Params.style.menu.textColor }};
+        {{end}}
+    {{end}}
+    }
+    .item{
+        {{with $.Site.Params.style.menu.itemColorDark}}
+        background-color:{{$.Site.Params.style.menu.itemColorDark}};
+        {{else}}
+            {{ with $.Site.Params.style.menu.itemColor}}
+        background-color:{{$.Site.Params.style.menu.itemColor}};
+            {{end}}
+        {{end}}
+    }
+}
+{{end}}

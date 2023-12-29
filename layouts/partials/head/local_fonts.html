@@ -1,0 +1,12 @@
+{{ if .Site.Params.local_fonts }}
+	{{ range .Site.Params.local_fonts }}
+	{{ $format := cond (strings.HasSuffix .file ".woff2" ) "woff2" "truetype" }}
+	<link rel="preload" href="{{ printf "fonts/%s" .file }}" as="font" type="font/ttf" crossorigin>
+	<style>
+	@font-face{
+		font-family:'{{ .name }}';
+		src:url('{{ printf "fonts/%s" .file }}') format('{{$format}}');
+	}
+	</style>
+	{{ end }}
+{{ end }}

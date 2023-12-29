@@ -1,0 +1,13 @@
+{{ if .Site.Params.google_fonts }}
+    {{ $google_fonts := slice }}
+    {{ range .Site.Params.google_fonts }}
+        {{ $family := replace (index (.) 0) " " "+" }}
+        {{ $weights := replace (index (.) 1) " " "" }}
+        {{ $string := print $family ":wght@" $weights }}
+        {{ $google_fonts = $google_fonts | append $string }}
+    {{ end }}
+    {{ $url := delimit $google_fonts "&family=" }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family={{ $url | safeURL }}&display=swap" rel="stylesheet">
+{{ end }}

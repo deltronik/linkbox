@@ -1,0 +1,47 @@
+{{if $.Site.Params.style.footer }}
+    .box-footer{
+        {{with $.Site.Params.style.footer.backColor}}
+    background-color:{{$.Site.Params.style.footer.backColor}};
+        {{end}}
+        {{with $.Site.Params.style.footer.footerSize}}
+    height:{{$.Site.Params.style.footer.footerSize}};
+        {{end}}
+        {{with $.Site.Params.style.footer.footerWidth}}
+        width:{{$.Site.Params.style.footer.footerWidth}};
+        {{end}}
+        {{with $.Site.Params.style.footer.rad}}
+        border-top-left-radius: {{$.Site.Params.style.footer.rad}};
+        border-top-right-radius: {{$.Site.Params.style.footer.rad}};
+        {{end}}
+    }
+
+    .box-footer p{
+        {{with $.Site.Params.style.footer.textColor}}
+        color:{{$.Site.Params.style.footer.textColor}};
+        {{end}}
+        {{with $.Site.Params.style.footer.textSize}}
+        font-size:{{$.Site.Params.style.footer.textSize}};
+        {{end}}
+    }
+
+    @media(prefers-color-scheme: dark){
+        .box-footer{
+            {{with $.Site.Params.style.footer.backColorDark }}
+        background-color:{{$.Site.Params.style.footer.backColorDark }};
+        {{else}}
+            {{with $.Site.Params.style.footer.backColor}}
+        background-color:{{$.Site.Params.style.footer.backColor}};
+            {{end}}    
+        {{end}}
+        }
+        .box-footer p{
+            {{with $.Site.Params.style.footer.textColorDark}}
+        color:{{$.Site.Params.style.footer.textColorDark}};
+            {{else}}
+                {{with $.Site.Params.style.footer.textColor}}
+        color:{{$.Site.Params.style.footer.textColor}};
+                {{end}}
+            {{end}}
+        }
+    }
+{{end}}

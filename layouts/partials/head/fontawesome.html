@@ -1,0 +1,9 @@
+{{- if eq hugo.Environment "development" }}
+{{ $iconsPath := "css/Font-Awesome-6.x/css/all.css" }}
+<link rel="stylesheet" href="{{$iconsPath}}">
+{{- else }}
+{{ $iconsPath := "css/Font-Awesome-6.x/css/all.min.css" }}
+    {{- with $iconsPath }}
+<link rel="stylesheet" href="{{$iconsPath}}">
+    {{- end }}
+{{- end }}

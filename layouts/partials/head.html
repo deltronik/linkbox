@@ -1,25 +1,8 @@
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minumum-scale=1.0, inital-scale=1.0">
-	<title> {{if  .Title }} {{ .Title }} {{else}} "mi box page" {{end}}</title>
-	<meta name="robots" content="index,follow">
-	{{ if $.Site.Params.Description }}
-	<meta name="description" content="{{ $.Site.Params.Description }}">
-	{{ else }}
-	<meta name="description" content="LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree.">
-	{{ end }}
-	{{ if $.Site.Params.Keywords }}
-	<meta name="keywords" content="{{ $.Site.Params.Keywords }}">
-	{{ end }}
-	{{ if site.Author }}
-	<meta name="author" content="{{ site.Author }}">
-	{{ else }}
-	<meta name="author" content="DANH">
-	{{ end }}
-	{{ template "_internal/opengraph.html" . }}
-	{{ template "_internal/twitter_cards.html" . }}
-	{{ template "_internal/google_analytics.html" . }}
-	{{ partial "head/favicon.html" . }}
-	{{ partial "head/fonts.html" . }}
-	{{ partial "head/css.html" . }}
-</head>
+{{ partial "head/meta.html" . }}
+{{ partial "head/google_fonts.html" . }}
+{{ partial "head/local_fonts.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/google_analytics.html" . }}
+{{ partial "head/css.html" . }}
+{{ partial "head/fontawesome.html" . }}

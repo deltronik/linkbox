@@ -1,39 +1,77 @@
-languageCode = 'en-Es'
+baseURL = '.'
+languageCode = 'es-es'
 title = 'LinkBox'
-
-[module]
-	[module.hugoVersion]
-	extended = false
-	min = '0.118.2'
+enableRobotsTXT = true
 
 [menu]
 	[[menu.main]]
+    pre = "<i class='fa-brands fa-github'></i>"
 	name = 'githut'
-	url = 'https://github.com/deltronik/linkbox'
-	weight = 1
+	url = '#'
+	post = ""
+    weight = 1
 	[[menu.main]]
-	name = 'Licence'
-	url = 'https://gitub.com/deltronik/linkbox/LICENSE'
+	pre = ""
+	name = 'gitlab'
+	url = "#"
+	post = "<i class='fa-brands fa-gitlab'></i>"
 	weight = 2
-	[[menu.main]]
-	name = 'README'
-	url = 'https://github.com/deltronik/linkbox/README'
-	weight = 3
+
 [params]
-	description= "my linkbox site"
-	title = 'linkbox'
-	google_fonts= true
-	fonts = [["Josefin+sans","300,400,700"]]
-	local_fonts =  [{name="Orbit",file="Orbit/Oribit-Regular.ttf"}]
-[params.header]
-	enable_avatar=true
-	gravatar = false
-	avatar = 'image/avatar/avatar.png'
-	title_site = 'Linbox title'
-	paragraph = 'My linkbox site'
-	social_menu_bar = true
-[params.header.social_bar]
-	github = 'deltronik98'
-	blog = 'deltronik.net'
-
-
+	google_fonts = [["Josefin+Sans","300"]]
+	local_fonts = [{name="Orbit", file="Orbit/Orbit-Regular.ttf"}]
+    [params.header]
+#	gravatar = "deltronik98@gmail.com"
+    user = "LinkBox"
+	paragraph = "Cuando los electrones se mueven las cosas suceden"
+    avatar = "img/logo-light.svg"
+	avatar_dark = "img/logo-dark.svg"
+        [params.header.icons]
+        github = "esooo"
+		gitlab = "esoo"
+		x = "x"
+    [params.footer]
+    description = "Cuando los electrones se mueven las cosas suceden"
+    creator = true
+#	license ="esto es una licencia"
+[params.style]
+	backImg = 'backDark.svg'
+	backImgDark = 'backLight.svg'
+	backColor = "red"
+	backColorDark = "blue"
+		[params.style.user]
+		imgSize = "120px"
+		imgRad  = "50%"
+		imgSeparate = "4em"
+		titleSeparate  = "10px"
+		titleSize = "2em"
+		titleFamily = "Orbit"
+		titleColor = "black"
+		textColor = "white"
+		textColorDark = "yellow"
+		textSeparate = "20px"
+		textSize = "18px"
+		[params.style.icons]
+		color = "red"
+		colorDark = "Dark"
+		size = "2em"
+		[params.style.menu]
+		textColor = "white"
+		textColorDark = "black"
+		textSize = "2em"
+		textFamily = "Josefin Sans"
+		itemColor = "green"
+		itemColorDark = "yellow"
+		itemSeparate = "2em"
+		itemSize = "4em"
+		itemWidth = "80%"
+		itemRad = "15px"
+		[params.style.footer]
+		backColor = "red"
+		backColorDark = "green"
+		footerSize = "auto"
+		textSize = "14px"
+		textColor = "white"
+		textColorDark = "black"
+		footerWidth = "100%"
+		rad = "0px"

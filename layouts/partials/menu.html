@@ -1,8 +1,9 @@
-<nav class="menu">
-  <ul class="box-link">
-      {{ range .Site.Menus.main }}
-          <li class="url-item"><a class="item-group url-group" href="{{ .URL }}">{{ .Pre }}{{ .Name }}{{.Post}}</a></li>
-      {{ end }}
-  </ul>
-</nav>
-
+<section class="box-menu">
+    <nav class="menu">
+        <ul class="box-item">
+            {{ range .Site.Menus.main }}
+                <li class="item"><a class="item-url link-group" href="{{ .URL }}">{{ .Pre }} {{ .Name }} {{.Post}}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+</section>

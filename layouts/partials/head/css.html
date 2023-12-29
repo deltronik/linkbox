@@ -1,30 +1,26 @@
-{{/* Font Awesome */}}
-<link rel="stylesheet" href="resources/fontawesome/css/all.css">
-{{/* Style*/}}
-
+{{/* Global Style */}}
 {{- with resources.Get "css/main.css" }}
   {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
     {{- with . | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{- end }}
   {{- end }}
 {{- end }}
 
-{{/*Custom*/}}
-{{ if $.Site.Params.custom_css }}
-  {{ if  $.Site.Params.custom_css.theme_toggle }}
-    {{ $style_Mode := resources.Get "css/toggle_theme.scss" | resources.ExecuteAsTemplate "css/style.scss" }}
-    <link rel="stylesheet" href="{{ $style_Mode.Permalink }}">
-    {{ else }}
-    {{ $style_Mode := resources.Get "css/simple_style.scss" | resources.ExecuteAsTemplate "css/style.scss" }}
-    <link rel="stylesheet" href="{{ $style_Mode.Permalink }}">
-    {{ end }}
-{{ else }}
-  {{ $style_Mode := resources.Get "css/template_style.css"}}
-  <link rel="stylesheet" href="{{ $style_Mode.Permalink }}">
-{{ end }}
+{{/* Theme Custom Style */}}
+{{ $user := resources.Get "css/header/user.css" | resources.ExecuteAsTemplate "css/user.css" . }}
+{{ $icons := resources.Get "css/header/icons.css" | resources.ExecuteAsTemplate "css/icons.css" . }}
+{{ $menu := resources.Get "css/main/menu.css" | resources.ExecuteAsTemplate "css/menu.css" . }}
+{{ $footer:= resources.Get "css/footer/footer.css" | resources.ExecuteAsTemplate "css/footer.css" . }}
+{{ $main := resources.Get "css/main/body.css" | resources.ExecuteAsTemplate "css/body.css" . }}
 
-
-
+{{ $theme := slice $main $user $icons $menu $footer | resources.Concat "theme.css" | resources.ExecuteAsTemplate "theme.css" . }}
+{{- if eq hugo.Environment "development"}}
+<link rel="stylesheet" href="{{ $theme.RelPermalink }}" crossorigin="anonymous">
+{{- else }}
+  {{- with $theme | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .Permalink }}" crossorigin="anonymous" integrity="{{ .Data.Integrity }}">
+  {{- end }}
+{{- end }}
