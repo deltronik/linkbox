@@ -9,6 +9,10 @@ demosite = 'https://deltronik.github.io/linkbox'
 tag = ['landig page','linktree alternative','simple theme','company','web development']
 feature = ['some','awesome','features','web design','landing page', 'theme development', 'dark','light','minimal','online presence']
 
+min_version = "0.121.0"
+
 [author]
   name = 'deltronik'
   homepage = 'https://www.deltronik.net'
+
+
