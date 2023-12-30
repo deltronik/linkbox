@@ -1,13 +1,13 @@
-name = 'linkbox'
-licence = 'MIT'
-licenselink = 'https://github.com/deltronik/linkbox/LICENSE'
-description = 'LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree. '
+name = "linkbox"
+licence = "MIT"
+licenselink = "https://github.com/deltronik/linkbox/LICENSE"
+description = "LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree."
 
-homepage = 'https://github.com/deltronik/linkbox'
-demosite = 'https://deltronik.github.io/linkbox'
+homepage = "https://github.com/deltronik/linkbox"
+demosite = "https://deltronik.github.io/linkbox"
 
-tag = ['landig page','linktree alternative','simple theme','company','web development']
-feature = ['some','awesome','features','web design','landing page', 'theme development', 'dark','light','minimal','online presence']
+tag = ["landig page","linktree alternative","simple theme","company"]
+feature = ["some","awesome","landing page", "dark","light","minima","online presence"]
 
 min_version = "0.115.4"
 
