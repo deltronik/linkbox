@@ -16,6 +16,7 @@ Linkbox es un tema diseñado para [hugo](https://gohugo.io) e inspirado en LinkT
 * [Pie de Pagina](#footer)
 * [Personalización](#css)
 
+
 ## [Requisitos](#requisitos)
 - Local
 	1. Instalar [hugo.](https://gohugo.io/installation)

@@ -12,8 +12,8 @@ enableRobotsTXT = true
     weight = 1
 	[[menu.main]]
 	pre = ""
-	name = 'licence'
-	url = "https://github.com/deltronik/linkbox/LICENSE"
+	name = 'Documentación'
+	url = "https://github.com/deltronik/linkbox/README.md"
 	post = "<i class='fa-solid fa-file-circle-check'></i>"
 	weight = 2
 
@@ -21,25 +21,19 @@ enableRobotsTXT = true
 	google_fonts = [["Josefin+Sans","300"]]
 	local_fonts = [{name="Orbit", file="Orbit/Orbit-Regular.ttf"}]
     [params.header]
-#	gravatar = "deltronik98@gmail.com"
    	 user = "LinkBox"
 	paragraph = "Cuando los electrones se mueven las cosas suceden"
-	avatar = "img/avatar/avatar.png"
-#        [params.header.icons]
-#        github = "esooo"
-#		gitlab = "esoo"
-#		x = "x"
+	avatar = "avatar.png"
     [params.footer]
     description = "Cuando los electrones se mueven las cosas suceden"
     creator = true
-#	license ="esto es una licencia"
 [params.style]
-	backImg = 'img/background/background.jpg'
+	backImg = 'background.jpg'
 	backColor = "white"
-#	repeatImg
-#	attachmentImg
-#	positionImg
-#	sizeImg
+#	repeatImg = ""
+#	attachmentImg = ""
+#	positionImg = ""
+#	sizeImg = ""
 		[params.style.user]
 		imgSize = "150px"
 		imgRad  = "15px"
