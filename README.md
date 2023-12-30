@@ -1,5 +1,5 @@
 <h1 style="text-aligb:center">LinkBox</h1>
-![LinkBox Preview](https://github.com/deltronik/linkbox/blob/main/images/tn.png)
+![LinkBox Preview](https://github.com/deltronik/linkbox/blob/main/images/tn.png?raw=true){width:'100%'}
 
 ---
 
