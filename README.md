@@ -20,7 +20,7 @@ Linkbox es un tema diseñado para [hugo](https://gohugo.io) e inspirado en LinkT
 
 ## [Requisitos](#requisitos)
 - Local
-	1. Instalar [hugo.](https://gohugo.io/installation) (min version 0.115.4)
+	1. Instalar [hugo.](https://gohugo.io/installation)
 	2. Instalar [Git.](https://git-scm.com)
 - Remoto
 	1. Fork a este repositorio

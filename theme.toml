@@ -9,8 +9,6 @@ demosite = "https://link-box.netlify.app"
 tag = ["landig page","linktree alternative","simple theme","company"]
 feature = ["some","awesome","landing page", "dark","light","minima","online presence"]
 
-min_version = "0.59.0"
-
 [author]
   name = 'deltronik'
   homepage = 'https://www.deltronik.net'
