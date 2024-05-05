@@ -6,7 +6,7 @@ description = "LinkBox is a basic and simple theme that allows you to create a l
 homepage = "https://github.com/deltronik/linkbox"
 demosite = "https://link-box.netlify.app"
 
-tag = ["landig page","linktree alternative","simple theme","company"]
+tag = ["company","Minimal","Dark","Light","Personal","Dark mode","Contact"]
 feature = ["some","awesome","landing page", "dark","light","minima","online presence"]
 
 [author]
