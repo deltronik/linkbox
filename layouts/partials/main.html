@@ -1,0 +1,9 @@
+<main class="box-menu">
+    {{ if eq .Site.Params.order true }}
+        {{ partial "main/icons.html" . }}
+        {{ partial "main/menu.html" . }}
+    {{ else }}
+        {{ partial "main/menu.html" . }}
+        {{ partial "main/icons.html" . }}
+    {{ end }}
+</main>

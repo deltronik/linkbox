@@ -1,0 +1,253 @@
+{{ if $.Site.Params.icons }}
+{{ $icon := .Site.Params.icons }}
+    <nav class="box-ico">
+         <ul>
+            {{ with $icon.github }}
+            <li class="icon-item">
+                <a class="link-group social-bar" href="https://www.github.io/{{ $icon.github }}">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            {{ end }}
+
+            {{ with $icon.gitlab }}
+            <li class="icon-item">
+                <a class="link-group social-bar" href="https://www.gitlab.com/{{ $icon.gitlab }}">
+                    <i class="fa-brands fa-gitlab"></i>
+                </a>
+            </li>
+            {{ end }}
+
+            {{ with $icon.instagram }}
+            <li class="icon-item">
+                <a class="link-group social-bar" href="https://www.instagram.com/{{ $icon.instagram }}">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+             {{ end }}
+
+            {{ with $icon.facebook }}
+            <li class="icon-item">
+                <a class="link-group social-bar" href="https://www.facebook.com/{{ $icon.facebook }}">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            {{ end }}
+
+        {{ with $icon.x}}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://x.com{{ $icon.twitter }}">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </li>
+        {{ end }}
+
+        {{ with $icon.mastodon }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://mastodon.social/{{$icon.mastodon}}">
+                <i class="fa-brands fa-mastodon"></i>
+            </a>
+        </li>
+        {{ end }}
+
+        {{ with $icon.linkedin }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.linkedin.com/in/{{ $icon.linkedin }}">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.youtube }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.youtube.com/{{ $icon.youtube }}">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.pinterest }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.pinterest.com/{{ $icon.pinterest}}">
+                <i class="fa-brands fa-pinterest"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.tiktok }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.tiktok.com/{{ $.tiktok }}">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.reddit }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.redit.com/{{ $icon.reddit }}">
+                <i class="fa-brands fa-reddit"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.snapchat }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.snapchat.com/{{ $icon.snapchat }}">
+                <i class="fa-brands fa-snapchat"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.whatsapp }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://wa.me/{{ $icon.whatsapp}}">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.telegram }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://t.me/{{ $icon.telegram }}">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.wordpress }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.wordpress}}">
+                <i class="fa-brands fa-wordpress"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.wix }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.wix}}">
+                <i class="fa-brands fa-wix"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.stack_overflow }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.stackoverflow.com/users/{{$icon.stack_overflow}}">
+                <i class="fa-brands fa-stack-overflow"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.sound_cloud }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.soundcloud.com/{{$icon.soundcloud }}">
+                <i class="fa-brands fa-soundcloud"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.spotify }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://spotify.com/{{$icon.spotify}}">
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.apple_music }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.apple.com/music/{{$icon.apple_music}}">
+                <i class="fa-brands fa-apple-music"></i>
+            </a>
+        </li>
+        {{ end }}
+
+        {{ with $icon.bandcamp}}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.bandcamp.com/{{$icon.bandcamp}}">
+                <i class="fa-brands fa-bandcamp"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.vimeo }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.vimeo.com/{{$icon.vimeo}}">
+                <i class="fa-brands fa-vimeo"></i>
+            </a>
+        </li>
+        {{ end }}
+
+        {{ with $icon.daylamotion }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.daylamotion.com/{{$icon.daylamotion}}">
+                <i class="fa-brands fa-daylamotion"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.twitch }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.twich.tv/{{$icon.twitch}}">
+                <i class="fa-brands fa-twich"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.cafecito }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.cafecito.app/{{$icon.cafecito}}">
+                <i class="fa-solid fa-mug-saucer"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.tecito }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://www.tecito.app/{{$icon.tecito}}">
+                <i class="fa-solid fa-mug-hot"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.onlyfans }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://onlyfans.com/{{$icon.onlyfans}}">
+                <i class="fa-solid fa-unlock-keyhole"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.patreon }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://patreon.com/{{$icon.patreon}}">
+                <i class="fa-brands fa-patreon"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.paypal }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.paypal}}">
+                <i class="fa-brands fa-paypal"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.blog }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.blog}}">
+                <i class="fa-solid fa-blog"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.personal_site }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.personal_site}}">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.curriculum }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.curriculum}}">
+                <i class="fa-regular fa-file-lines"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.steam }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="https://steam.com/{{$icon.steam}}">
+                <i class="fa-brands fa-steam"></i>
+            </a>
+        </li>
+        {{ end }}
+        {{ with $icon.kickstarter }}
+        <li class="icon-item">
+            <a class="link-group social-bar" href="{{$icon.kickstarter}}">
+                <i class="fa-brands fa-kickstarter"></i>
+            </a>
+        </li>
+        {{ end }}
+        </ul>
+    </nav>
+{{ end }}

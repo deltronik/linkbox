@@ -5,14 +5,14 @@
     </figure>
     {{ end }}
     <main class="box-main">
-        {{ with .Site.Params.header.user }}
-            <h1 class="user-site"> {{ $.Site.Params.header.user }} </h1>
+        {{ if .Site.Params.header.user }}
+        <h1 class="user-site" >{{ .Site.Params.header.user }}</h1>
+        {{ else }}
+        <h1 class="user-site">My Linkbox Site</h1>
         {{ end }}
+
         {{ with .Site.Params.header.paragraph }}
             <p class="user-description"> {{$.Site.Params.header.paragraph }} </p>
-        {{ end }}
-        {{ with .Site.Params.header.icons }}
-            {{ partial "header/icons.html" . }}
         {{ end }}
     </main>
 </header>

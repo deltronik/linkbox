@@ -46,20 +46,21 @@ table {border-collapse: collapse;border-spacing: 0;}
 }
 
 .social-bar {
-    margin-inline-start: 4px;
-    margin-inline-end: 4px;
+    margin-inline: 6px;
 }
 
 /* MENU */
 .box-menu{
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: top;
     align-items: center;
 }
 
 .menu{
     width: 100%;
+    margin-block:2em;
 }
 
 .box-item{

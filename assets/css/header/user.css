@@ -1,7 +1,7 @@
 {{ if $.Site.Params.style.user }}
     .box-hero{
-        {{ with $.Site.Params.style.user.imgSeparate }}
-        margin-top:{{$.Site.Params.style.user.imgSeparate}};
+        {{ with $.Site.Params.style.user.topSeparate }}
+        margin-top:{{$.Site.Params.style.user.topSeparate}};
         {{end}}
     }
 
@@ -37,9 +37,9 @@
     font-size:{{$.Site.Params.style.user.titleSize }};
         {{end}}
         {{ with $.Site.Params.style.user.titleSeparate }}
-        margin-bottom:{{$.Site.Params.style.user.titleSeparate }};
+        margin-block:{{$.Site.Params.style.user.titleSeparate }};
         {{else}}
-        margin-bottom:5px;
+        margin-block:10px;
         {{end}}
         {{ with $.Site.Params.style.user.titleFamily }}
         font-family:'{{$.Site.Params.style.user.titleFamily }}';
@@ -53,8 +53,8 @@
         {{ with $.Site.Params.style.user.textSize }}
     font-size:{{$.Site.Params.style.user.textSize }};
         {{end}}
-        {{ with $.Site.Params.style.user.textSeparate }}
-    margin-bottom:{{$.Site.Params.style.user.textSeparate}};
+        {{ with $.Site.Params.style.user.textBottomMargin }}
+    margin-bottom:{{$.Site.Params.style.user.textBottonMargin}};
         {{ end }}
 	{{ with $.Site.Params.style.user.textFamily }}
     font-family:{{ $.Site.Params.style.user.textFamily }};

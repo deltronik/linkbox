@@ -1,19 +1,36 @@
-{{ $rtxt := $.Site.Params.robotsTXT }}
-{{ with $.Site.Params.robotTXT }}
-<meta name="robots" content="{{$rtxt}}">
-{{else}}
-<meta name="robots" content="index,follow">
-{{ end }}
-{{ if $.Site.Params.Description }}
-<meta name="description" content="{{ $.Site.Params.Description }}">
+<meta property="og:url" content=" {{ .Site.BaseURL }}">
+<meta property="twitter:domain" content="{{ .Site.BaseURL }}">
+<meta property="twitter:url" content="{{ .Site.BaseURL }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta name="twitter:title" content="{{ .Site.Title }}">
+{{ with .Site.Params.description }}
+<meta name="description" content=" {{ $.Site.Params.description }} ">
+<meta property="og:description" content="{{ $.Site.Params.description}}">
+<meta name="twitter:description" content=" {{ $.Site.Params.description}} ">
 {{ else }}
-<meta name="description" content="LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree.">
+<meta name="description" content="Linkbox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree">
+<meta property="og:description" content="LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree.">
+<meta name="twitter:description" content="LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree.">
+
 {{ end }}
-{{ if $.Site.Params.Keywords }}
-<meta name="keywords" content="{{ $.Site.Params.Keywords }}">
+
+{{ with .Site.Params.keywords }}
+<meta name="keywords" content="{{ $.Site.Params.keywords }}">
 {{ end }}
-{{ if site.Author }}
-<meta name="author" content="{{ site.Author }}">
+
+{{ with .Site.Params.author }}
+<meta name="author" content="{{ $.Site.Params.author }}">
 {{ else }}
 <meta name="author" content="DANH">
+{{ end }}
+
+{{ with .Site.Params.imageOg }}
+<meta property="og:image" content="{{ $.Site.Params.imageOg }}">
+
+{{ else }}
+<meta property="og:image" content="/static/images/tn.png">
+<meta name="twitter:card" content="/static/images/tn.png">
+<meta name="twitter:image" content="/static/images/tn.png">
+
 {{ end }}

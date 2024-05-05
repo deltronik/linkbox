@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{ block "title" . }}{{.Site.Title }}{{end}} </title>
+    {{/** Meta Tag, SEO and Config Site **/}}
+    {{ partial "head/meta.html" . }}
+    {{ partial "head/google_fonts.html" . }}
+    {{ partial "head/local_fonts.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ partial "head/css.html" . }}
+    {{ partial "head/fontawesome.html" . }}
+    {{ partial "head/favicon.html" . }}
+</head>
+<body class="container">
+    {{ partial "header.html" . }}
+
+    {{ partial "main.html" . }}
+
+    {{partial "footer.html" . }}
+</body>
+</html>

@@ -2,8 +2,10 @@
     {{ $google_fonts := slice }}
     {{ range .Site.Params.google_fonts }}
         {{ $family := replace (index (.) 0) " " "+" }}
+        {{/*
         {{ $weights := replace (index (.) 1) " " "" }}
-        {{ $string := print $family ":wght@" $weights }}
+        */}}
+        {{ $string := print $family ":ital,wght@0,100..700" }}
         {{ $google_fonts = $google_fonts | append $string }}
     {{ end }}
     {{ $url := delimit $google_fonts "&family=" }}
