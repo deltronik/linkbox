@@ -1,84 +1,71 @@
-baseURL = "https://example.com"
+baseURL = "."
 title = "LinkBox"
 languageCode = "es-ES"
 theme = "linkbox"
 
 [menu]
     [[menu.main]]
-        name = "Google"
-        url = "https://google.com"
+	pre = "<i class='fa-brands fa-github'></i>"
+        name = "github"
+        url = "https://github.com/deltronik/linkbox"
     [[menu.main]]
-        name ="facebook"
-        url ="https://facebook.es"
+	pre = "<i class='fa-regular fa-file-lines fa-bounce'></i>"
+        name ="Documentación"
+        url ="https://github.com/deltronik/linkbox/blob/main/README.md"
+    [[menu.main]]
+	pre = "<i class='fa-regular fa-copyright'></i>"
+	name = "Licencia"
+	url = "https://github.com/deltronik/linkbox/blob/main/LICENSE"
 
 [params]
     order = false
-    description = "This is a description"
-    author = "deltronik"
-    keywords = "linktree, social, box, navbar"
-#    imageOg = "/" -base Static
-    google_fonts = [["Jersey+25"],["Josegine+Sans"],["Orbit"]]
-#    local_fonts = [{name="Orbit",file="orbit.ttf"},{name="name-fonts", file="path"}] - base Static/
+    imageOg = "images/tn.png"
+    google_fonts = [["Josefin+Sans","300,400"]]
+    local_fonts = [{name="Orbit",file="Orbit/Orbit-Regular.ttf"}]
 
     [params.header]
-        # avatar = "images/tn.png"
-        # avatar_dark = "images/tn.png"
-        gravatar = "danyrdia98@gmail.com"
-        user = "LinkBox"
-        paragraph = "this is a description"
+        avatar = "avatar.png"
+	user = "Link-Box"
+        paragraph = "El café con leche es como el café pero con leche"
     
     [params.icons]
         github = "deltronik"
-        gitlab = "deltronik"
         instagram = "deltronik_"
     [params.footer]
-        description = "A la grande le puse cuca"
+        description = "Cuando los electrones se mueven las cosas suceden"
+	creator = true
 
     [params.style]
-        backColor = "#121212"
-        #backColorDark 
-        #backImg
-        #backImgDark
-        #repeatImg
-        #attachmentImg
-        #positionImg
-        #sizeImg
+	backImg = "background.jpg"
+	backColor = "white"	
     [params.style.user]
-        topSeparate = "2em" #margenSuperior
-        imgRad = "25%" #radio del avatar
-        imgSize = "180px" #tamaño avatar
-        titleColor = "red" #color del Name, user 
-        #titleCOlorDark
-        titleSize = "2em" #tamaño del titulo
-        titleSeparate = "1em" #margen iinferior y superior del name, user
-        titleFamily = "Josefin Sans" #font famili , tipografia
-        textColor = "red"
-        #textColorDark
-        textSize = "1.5em"
-        textBottomMargin = "1em"
+        imgSize = "150px"
+        imgRad  = "15px"
+        imgSeparate = "4em"
+        titleSeparate  = "10px"
+        titleSize = "2em"
+        titleFamily = "system-ui"
+        titleColor = "black"
+        textColor = "black"
+        textSeparate = "15px"
+        textFamily = "Orbit"
+        textSize = "1.1em"
     [params.style.icons]
-        color = "gray"
-        #colorDark
-        size = "2em"
+        color = "black"
+        size = "1.5em"
     [params.style.menu]
         textColor = "white"
-        #textColorDark
-        textSize = "1em"
-        itemColor = "blue"
-        #itemColorDark = ""
-        itemRad = "10px"
-        itemSize = "2em"
-        itemWidth = "80%"
-        itemSeparate = "10px"
-        itemFamily = "Jersey"
+        textSize = "2em"
+        textFamily = "Josefin Sans"
+        itemColor = "black"
+        itemSeparate = "2em"
+        itemSize = "3em"
+        itemWidth = "90%"
+        itemRad = "15px"
     [params.style.footer]
-        backColor = "gray"
-        #backColorDark =""
-        footerSize = "4em"
-        footerWidth = "100%"
-        rad = "10px"
+        backColor = "black"
+        footerSize = "auto"
+        textSize = "14px"
         textColor = "white"
-        #textColorDark = ""
-        textSize = "0.8em"
-        
-
+        footerWidth = "100%"
+        rad = "0px"
