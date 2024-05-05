@@ -1,0 +1,84 @@
+baseURL = "https://example.com"
+title = "LinkBox"
+languageCode = "es-ES"
+theme = "linkbox"
+
+[menu]
+    [[menu.main]]
+        name = "Google"
+        url = "https://google.com"
+    [[menu.main]]
+        name ="facebook"
+        url ="https://facebook.es"
+
+[params]
+    order = false
+    description = "This is a description"
+    author = "deltronik"
+    keywords = "linktree, social, box, navbar"
+#    imageOg = "/" -base Static
+    google_fonts = [["Jersey+25"],["Josegine+Sans"],["Orbit"]]
+#    local_fonts = [{name="Orbit",file="orbit.ttf"},{name="name-fonts", file="path"}] - base Static/
+
+    [params.header]
+        # avatar = "images/tn.png"
+        # avatar_dark = "images/tn.png"
+        gravatar = "danyrdia98@gmail.com"
+        user = "LinkBox"
+        paragraph = "this is a description"
+    
+    [params.icons]
+        github = "deltronik"
+        gitlab = "deltronik"
+        instagram = "deltronik_"
+    [params.footer]
+        description = "A la grande le puse cuca"
+
+    [params.style]
+        backColor = "#121212"
+        #backColorDark 
+        #backImg
+        #backImgDark
+        #repeatImg
+        #attachmentImg
+        #positionImg
+        #sizeImg
+    [params.style.user]
+        topSeparate = "2em" #margenSuperior
+        imgRad = "25%" #radio del avatar
+        imgSize = "180px" #tamaño avatar
+        titleColor = "red" #color del Name, user 
+        #titleCOlorDark
+        titleSize = "2em" #tamaño del titulo
+        titleSeparate = "1em" #margen iinferior y superior del name, user
+        titleFamily = "Josefin Sans" #font famili , tipografia
+        textColor = "red"
+        #textColorDark
+        textSize = "1.5em"
+        textBottomMargin = "1em"
+    [params.style.icons]
+        color = "gray"
+        #colorDark
+        size = "2em"
+    [params.style.menu]
+        textColor = "white"
+        #textColorDark
+        textSize = "1em"
+        itemColor = "blue"
+        #itemColorDark = ""
+        itemRad = "10px"
+        itemSize = "2em"
+        itemWidth = "80%"
+        itemSeparate = "10px"
+        itemFamily = "Jersey"
+    [params.style.footer]
+        backColor = "gray"
+        #backColorDark =""
+        footerSize = "4em"
+        footerWidth = "100%"
+        rad = "10px"
+        textColor = "white"
+        #textColorDark = ""
+        textSize = "0.8em"
+        
+
