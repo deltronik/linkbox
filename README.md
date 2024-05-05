@@ -20,7 +20,7 @@ Linkbox es un tema diseñado para [hugo](https://gohugo.io) e inspirado en LinkT
 
 ## [Requisitos](#requisitos)
 - Local
-	1. Instalar [hugo.](https://gohugo.io/installation)
+	1. Instalar [hugo.](https://gohugo.io/installation) (min version 0.115.4)
 	2. Instalar [Git.](https://git-scm.com)
 - Remoto
 	1. Fork a este repositorio
@@ -30,8 +30,8 @@ Linkbox es un tema diseñado para [hugo](https://gohugo.io) e inspirado en LinkT
 Linkbox es extremadamente sencillo, desde su instalación hasta su uso, por ello puede implementarlo de la manera que mas le convenga
 
 - #### Instalación mediante Submodule Git
-	1. inicie un nuevo proyecto con HUGO → `hugo new site my-new-site`
-	2. muevase dentro de su nuevo proyecto → `cd my-new-site` e inicie git `git init`  
+	1. inicie un nuevo proyecto con HUGO → `hugo new site <my-new-site>`
+	2. muevase dentro de su nuevo proyecto → `cd <my-new-site>` e inicie git `git init`  
 	3. Añada linkbox mediante submodule
 	```bash
 	git submodule add https://github.com/deltronik/linkbox.git 'themes/linkbox'
@@ -44,10 +44,10 @@ Linkbox es extremadamente sencillo, desde su instalación hasta su uso, por ello
 	```
 - #### Clonar mediante git
 
-De forma alternativa y creo la mas facil, es clonar este repositorio mediante git `git clone https://github.com/deltronik/linkbox.git` y editar el archivo hugo.toml
+Una alternativa y creo la mas facil, es clonar este repositorio mediante git `git clone https://github.com/deltronik/linkbox.git` y editar el archivo hugo.toml
 
 - #### Fork al repositorio
-Otra forma aun mas sencilla es directamente hacer fork del reposirio y editar el archivo hugo.toml en editor
+Otra forma aun mas sencilla es directamente hacer fork del reposirio. elimine el archivo netlify.toml, la carpeta exampleSite cree y edité el archivo hugo.toml en la raiz del proyecto
 
 ## [Configuración Básica](#config)
 
@@ -60,9 +60,16 @@ languageCode = "es-es"
 # Titulo del sitio
 Title = "my-title-site"
 # buscadores pueden indexar enlaces del sitio (true or false)
-enableRobotsTXT = "false" 
+robotsTXT = "true"
 ```
+Cuando robotsTXT es true hugo genera el archivo robots.txt mediante una plantilla interna. Si usted prefiere utilizar una plantilla personalizada tiene dos opciones:
+
+- primero, puede generar un archivo `robots-txt` en `linkbox/layouts`.
+- segundo, puede establecer robotsTXT como false y crear el archivo `robots.txt`en `linkbox/static/`.
+- para mas información: [aquí](https://gohugo.io/templates/robots/).
+
 ## [Enlaces](#enlaces)
+
 Para configurar enlaces del menu linkbox respeta la sintaxis tipica de los menus en Hugo.
 - Parametros del menu
 	1. `pre`: este permite añadir contenido antes del titulo del item del menu, puede implementar html si asi lo desea por ejemplo añadir un icono de [fontawesome](https://fontawesome.com)
@@ -98,6 +105,7 @@ Linkbox permite configurar algunas etiquetas metas para  mejorar el SEO del siti
 ```
 
 #### Favicons
+
 Por defecto puede arrojar los archivos del favicon dentro de `statics` con los nombres preterminados, linkbox los indexara de forma automatica. 
 Por otra parte si quiere una mejor organización, por ejemplo poner el archivo favicon.ico dentro de `static/img/favicon/favicon.ico` puede configurarlo desde el archivo hugo.toml de la siguiente manera:
 
@@ -105,7 +113,18 @@ Por otra parte si quiere una mejor organización, por ejemplo poner el archivo f
 [params]
 	favicon = "static/img/favicon"
 ```
+los archivos esperados son los siguientes:
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- favicon-16x16.png
+- favicon-32x32.png
+- favicon.ico
+- site.webmanifest
+
 No es necesario configurar la ruta para cada archivo individual, linkbox toma la ruta del parametro favicon y la utiliza de forma preterminada con todos los archivos dentro de la carpeta.
+
+recomiendo severamente utilizar el siguiente recurso para crear los favicon [favicon generator](https://favicon.io/)
 
 | Nota: Preferentemente mantenga los nombres preterminados de los archivos favicon.
 
@@ -117,6 +136,12 @@ Linkbox le permitira conectar fuentes de dos formas
 [params]
 	local_fonts = [{name="Orbit",file="orbit.ttf"},{name="name-fonts", file="path"}]
 ```
+recuerde enfocar siempre al archivo .ttf o cualfuese sea el archivo tipografico siempre teniendo en cuenta que su rais es static, por ejemplo si usted tuviera el archivo en `linkbox/static/carpeta_fuente`o `mi_sitio_hugo/static/carpeta_fuente` la configuración seria la siguiente:
+
+```toml
+	local_fonts = [{name="Orbit",file="carpeta_fuente/fuente.ttf"}]
+```
+
 2. **Usar la api de Google**: Para conectar una fuente desde google fonts puede configurar en el archivo hugo.toml lo siguiente:
 
 ```toml
@@ -173,7 +198,7 @@ Si desea configurar una frase, slogan o una simple descripción debajo del avata
 Puede mostrar enlaces en forma de iconos debajo si lo desea (aún no esta configurado completamente pero se encuentra en estado funcional) solo debe añadir la red social o plataforma de la que desee mostrar el icono y añadir , en algunos casos, el usuario, en otros debera proveer el enlace directo a su perfil.
 
 ```toml
-    [params.header.social_bar]
+    [params.icons]
         github = 'user'
         gitlab = 'user'
         facebook = 'user'
@@ -296,7 +321,7 @@ Recuerde que puede emplear cualquier valor permitido por css dependiendo el para
 	# Radio de la imagen (puede utilizar cualquier valor permitido de css)
 	imgRad = "50%"
 	# Altura de la imagen (puede utilizar cualquier valor permitido por css)
-	imgSeparate = "4em"
+	topSeparate = "4em"
 	# separación entre el titulo/nombre y la imagen
 	titleSeparate = "15px"
 	# tamaño del titulo/nombre(puede utilizar cualquier valor permitido por css)
@@ -308,10 +333,10 @@ Recuerde que puede emplear cualquier valor permitido por css dependiendo el para
 	# Color del slogan/frase/descripción(puede utilizar cualquie valor permitido por css)
 	textColor = "rgb(255, 255, 255)"
 	# Separación entre el titulo y frase (puede usar cualquier valor permitido por css)
-	textSeparate = "10px"
+	textBottomMargin = "10px"
 	# familia tipogramica para la frase/slogan
 	textFamily = "Orbit"
-	# tamaño del texto
+	# tamaño del texto/frase
 	textSize = "1.1em"
 [params.style.icons]
 	# colores de los iconos(puede utilizar cualquier valor permitido por css)
@@ -346,8 +371,10 @@ Puede personalizar tamaño, tipografia, y color de los items del menu a su gusto
 
 ```toml
 [params.style.menu]
-	itemColor = "black"
-	itemColorDark = "white"
+		textColor = "white"
+		textColorDark = "black"
+        itemColor = "blue"
+        itemColorDark = "red"
 ```
 
 #### Personalice el pie de pagina
