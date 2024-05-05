@@ -4,12 +4,12 @@ licenselink = "https://github.com/deltronik/linkbox/LICENSE"
 description = "LinkBox is a basic and simple theme that allows you to create a landing page that houses multiple links, inspired by LinkTree."
 
 homepage = "https://github.com/deltronik/linkbox"
-demosite = "https://deltronik.github.io/linkbox"
+demosite = "https://link-box.netlify.app"
 
 tag = ["landig page","linktree alternative","simple theme","company"]
 feature = ["some","awesome","landing page", "dark","light","minima","online presence"]
 
-min_version = "0.115.4"
+min_version = "0.59.0"
 
 [author]
   name = 'deltronik'
