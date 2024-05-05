@@ -80,13 +80,13 @@ Para configurar enlaces del menu linkbox respeta la sintaxis tipica de los menus
 
 ```toml
 [menu]
-	[menu.main]
+	[[menu.main]]
 	pre = "<i class='fa-brands fa-github'></i>"
 	name = "github"
 	url = "https://github.com"
 	post = ""
 	weight = 2
-	[menu.main]
+	[[menu.main]]
 	pre = ""
 	name = "github"
 	url = "https://github.com"
@@ -134,12 +134,12 @@ Linkbox le permitira conectar fuentes de dos formas
 
 ```toml
 [params]
-	local_fonts = [{name="Orbit",file="orbit.ttf"},{name="name-fonts", file="path"}]
+	local_fonts = [{name="Orbit",file="/orbit.ttf"},{name="name-fonts", file="path"}]
 ```
 recuerde enfocar siempre al archivo .ttf o cualfuese sea el archivo tipografico siempre teniendo en cuenta que su rais es static, por ejemplo si usted tuviera el archivo en `linkbox/static/carpeta_fuente`o `mi_sitio_hugo/static/carpeta_fuente` la configuración seria la siguiente:
 
 ```toml
-	local_fonts = [{name="Orbit",file="carpeta_fuente/fuente.ttf"}]
+	local_fonts = [{name="Orbit",file="/carpeta_fuente/fuente.ttf"}]
 ```
 
 2. **Usar la api de Google**: Para conectar una fuente desde google fonts puede configurar en el archivo hugo.toml lo siguiente:
@@ -236,6 +236,39 @@ Puede elegir si mostrar o no el pie de pagina, basta con configurar un par de pa
 ```
 | Nota: si no configura la licencia se mostrara la licencia de LinkBox Preterminada, si tiene conocimientos de desarrollo web puede editar el archivo `linkbox/layouts/partials/footer.html``
 
+## Orden de Renderizado
+
+Una cosa no menor es que puede establecer si quiere que la lista de enlaces `[menu]` se genere antes o despues de la barra de iconos
+
+```toml
+	[params]
+		# true or false 
+		order = true
+```
+- Si **Order** es igual a 1 o true, se renderizara la lista de iconos primero y luego la lista de enlaces
+
+```html
+	<nav>
+		<!-- Social Bar -->
+	</nav>
+
+	<nav>
+		<!-- List URL -->
+	</nav>
+```
+
+- Si **Order** es igual a 0, false, o directamente ignora escribir el parametro se renderizara primero la lista de enlaces y luego la lista de iconos
+
+```html
+	<nav>
+		<!-- List URL -->
+	</nav>
+
+	<nav>
+		<!-- Social Bar -->
+	</nav>
+```
+
 ## [Personsalización](#css)
 
 LinkBox le permitira editar los archivos css desde el mismo hugo.toml. Puede personalizar (casí) todo con solo algunos parametros.
@@ -288,11 +321,11 @@ enableRobotsTXT = true
 [params]
         google_fonts = [["Josefin+Sans","300"]]
         local_fonts = [{name="Orbit", file="Orbit/Orbit-Regular.ttf"}]
-    	[params.header]
+[params.header]
         user = "LinkBox"
         paragraph = "Cuando los electrones se mueven las cosas suceden"
         avatar = "img/avatar/avatar.png"
-        [params.header.icons]
+[params.icons]
         github = "deltronik"
         gitlab = "deltronik_"
         x = "deltronik_"

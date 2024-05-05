@@ -19,9 +19,9 @@ theme = "linkbox"
 
 [params]
     order = false
-    imageOg = "images/tn.png"
+    imageOg = "/images/tn.png"
     google_fonts = [["Josefin+Sans","300,400"]]
-    local_fonts = [{name="Orbit",file="Orbit/Orbit-Regular.ttf"}]
+    local_fonts = [{name="Orbit",file="/Orbit/Orbit-Regular.ttf"}]
 
     [params.header]
         avatar = "avatar.png"
